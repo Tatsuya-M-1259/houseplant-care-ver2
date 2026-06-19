@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Plant Care</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="app.js"></script>
+</head>
+<body>
+    <header><h1>🪴 My Plant Care</h1></header>
+    <main class="container">
+        <section id="plant-registration" class="card">
+            <h2>🌱 植物登録</h2>
+            <form id="add-plant-form">
+                <input type="text" id="plant-name" required placeholder="名前">
+                <select id="species-select"></select>
+                <input type="date" id="last-watered" required>
+                <button type="submit" class="action-button primary">追加</button>
+            </form>
+        </section>
+        <section id="settings-section" class="card">
+            <h2>⚙️ 管理</h2>
+            <button id="export-data-button" class="action-button secondary">📤 エクスポート</button>
+            <button id="import-data-button" class="action-button secondary">📥 インポート</button>
+            <input type="file" id="import-file-input" accept=".json" style="display: none;">
+        </section>
+        <div id="plant-card-list"></div>
+    </main>
+    <div id="loading-overlay" style="display:none;">処理中...</div>
+</body>
+</html>
